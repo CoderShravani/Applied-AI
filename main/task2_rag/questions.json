@@ -1,0 +1,219 @@
+[
+  {
+    "id": "Q01",
+    "question": "What is the purpose of the NIST AI Risk Management Framework?",
+    "gold_pages": [
+      6,
+      7,
+      8
+    ],
+    "gold_terms": [
+      "manage risks",
+      "trustworthy AI"
+    ],
+    "expected": "A voluntary resource for incorporating trustworthiness considerations into the design, development, use, and evaluation of AI systems."
+  },
+  {
+    "id": "Q02",
+    "question": "Which four functions make up the AI RMF Core?",
+    "gold_pages": [
+      25,
+      26
+    ],
+    "gold_terms": [
+      "Govern",
+      "Map",
+      "Measure",
+      "Manage"
+    ],
+    "expected": "Govern, Map, Measure, and Manage."
+  },
+  {
+    "id": "Q03",
+    "question": "What does the Govern function do?",
+    "gold_pages": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "gold_terms": [
+      "policies",
+      "accountability"
+    ],
+    "expected": "Establishes policies, processes, roles, responsibilities, and accountability for AI risk management."
+  },
+  {
+    "id": "Q04",
+    "question": "What is the role of the Map function?",
+    "gold_pages": [
+      31,
+      32
+    ],
+    "gold_terms": [
+      "context",
+      "intended purpose"
+    ],
+    "expected": "Establishes context, identifies intended purposes, and characterizes risks and impacts."
+  },
+  {
+    "id": "Q05",
+    "question": "What is the role of the Measure function?",
+    "gold_pages": [
+      33,
+      34,
+      35,
+      36
+    ],
+    "gold_terms": [
+      "analyze",
+      "assess"
+    ],
+    "expected": "Uses quantitative, qualitative, or mixed methods to analyze, assess, benchmark, and monitor AI risks."
+  },
+  {
+    "id": "Q06",
+    "question": "What is the role of the Manage function?",
+    "gold_pages": [
+      37,
+      38
+    ],
+    "gold_terms": [
+      "prioritize",
+      "respond"
+    ],
+    "expected": "Prioritizes risks and allocates resources to treat, respond to, and monitor them."
+  },
+  {
+    "id": "Q07",
+    "question": "Name characteristics of trustworthy AI identified by NIST.",
+    "gold_pages": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "gold_terms": [
+      "valid",
+      "reliable",
+      "safe",
+      "secure",
+      "resilient",
+      "accountable",
+      "transparent",
+      "explainable",
+      "privacy",
+      "fair"
+    ],
+    "expected": "Validity and reliability, safety, security and resilience, accountability and transparency, explainability and interpretability, privacy enhancement, and fairness with harmful bias managed."
+  },
+  {
+    "id": "Q08",
+    "question": "Does the framework prescribe one specific risk-management method?",
+    "gold_pages": [
+      6,
+      7,
+      8
+    ],
+    "gold_terms": [
+      "flexible",
+      "voluntary"
+    ],
+    "expected": "No. It is voluntary and intended to be adaptable to different organizations, sectors, and use cases."
+  },
+  {
+    "id": "Q09",
+    "question": "Why should AI risk management be continuous rather than a one-time activity?",
+    "gold_pages": [
+      9,
+      10
+    ],
+    "gold_terms": [
+      "lifecycle",
+      "ongoing"
+    ],
+    "expected": "AI risks can emerge or change throughout design, development, deployment, use, and evaluation; monitoring and iteration are needed."
+  },
+  {
+    "id": "Q10",
+    "question": "What is meant by an AI system's intended purpose?",
+    "gold_pages": [
+      31,
+      32
+    ],
+    "gold_terms": [
+      "intended purpose",
+      "context"
+    ],
+    "expected": "The use or outcome for which the system is designed or deployed, considered in its operational and socio-technical context."
+  },
+  {
+    "id": "Q11",
+    "question": "What is the difference between validity and reliability?",
+    "gold_pages": [
+      17,
+      18
+    ],
+    "gold_terms": [
+      "validity",
+      "reliability"
+    ],
+    "expected": "Validity concerns whether a system performs for its intended use; reliability concerns consistent performance over time and conditions."
+  },
+  {
+    "id": "Q12",
+    "question": "Why does NIST emphasize documenting roles and responsibilities?",
+    "gold_pages": [
+      26,
+      27,
+      28,
+      29
+    ],
+    "gold_terms": [
+      "roles",
+      "responsibilities",
+      "accountability"
+    ],
+    "expected": "Clear ownership supports accountability, oversight, and coordinated risk decisions."
+  },
+  {
+    "id": "Q13",
+    "question": "What should an organization do when an AI risk cannot be adequately mitigated?",
+    "gold_pages": [
+      13
+    ],
+    "gold_terms": [
+      "response",
+      "accept"
+    ],
+    "expected": "Make an explicit, accountable risk response, which may include avoiding or discontinuing the use when risk is unacceptable."
+  },
+  {
+    "id": "Q14",
+    "question": "How does the framework treat fairness?",
+    "gold_pages": [
+      22,
+      23
+    ],
+    "gold_terms": [
+      "harmful bias",
+      "equity"
+    ],
+    "expected": "Fairness includes addressing harmful bias and considering equity; it is contextual and not reducible to one metric."
+  },
+  {
+    "id": "Q15",
+    "question": "Who can use the AI RMF?",
+    "gold_pages": [
+      14,
+      15
+    ],
+    "gold_terms": [
+      "organizations",
+      "sectors"
+    ],
+    "expected": "Organizations across sectors and sizes can adapt it to their AI systems and risk-management needs."
+  }
+]

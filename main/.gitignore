@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.DS_Store
+.ipynb_checkpoints/
+
+# Downloaded source PDF and generated vector/chunk cache
+task2_rag/data/*.pdf
+task2_rag/data/chunks_*.json
+task2_rag/data/embeddings_*.npy
+
+# Intermediate training checkpoints (retain the final adapter directory)
+task1_finetuning/outputs/checkpoint-*/
+
+# Local benchmark raw outputs may be regenerated; keep curated result summaries
+# (Do not ignore task*_*/results/ or report/report.pdf.)

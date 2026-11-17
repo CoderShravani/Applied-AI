@@ -1,0 +1,12 @@
+{
+  "n": 100,
+  "json_schema_validity": 1.0,
+  "exact_match": 0.75,
+  "field_accuracy": {
+    "action": 0.99,
+    "object": 0.96,
+    "priority": 0.83,
+    "due_in_days": 0.96,
+    "assignee": 1.0
+  }
+}

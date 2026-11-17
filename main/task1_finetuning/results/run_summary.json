@@ -1,0 +1,32 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "mode": "QLoRA",
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "learning_rate": 0.0002,
+  "epochs": 3,
+  "seed": 42,
+  "gpu": "Tesla T4",
+  "torch": "2.14.1+cu130",
+  "dataset": {
+    "train": 600,
+    "validation": 100,
+    "test": 100,
+    "total": 800
+  },
+  "effective_batch_size": 16,
+  "micro_batch_size": 4,
+  "gradient_accumulation_steps": 4,
+  "max_sequence_length": 256,
+  "quantization": "4-bit NF4",
+  "compute_dtype": "bfloat16"
+}

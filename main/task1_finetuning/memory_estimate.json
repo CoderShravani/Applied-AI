@@ -1,0 +1,30 @@
+{
+  "assumptions": {
+    "parameters": "7.0 billion",
+    "units": "decimal GB (1 GB = 1e9 bytes)",
+    "adapter_size": "0.1% of base parameters (illustrative; actual depends on target modules/rank)",
+    "excluded": "activations, temporary buffers, CUDA context, fragmentation, attention workspace"
+  },
+  "full_finetuning": {
+    "weights_fp16_GB": 14.0,
+    "master_weights_fp32_GB": 28.0,
+    "gradients_fp16_GB": 14.0,
+    "adam_moments_fp32_GB": 56.0,
+    "parameter_state_total_GB": 112.0,
+    "practical_peak_estimate_GB": "at least ~112 GB plus activations/workspace; often 120+ GB"
+  },
+  "lora": {
+    "frozen_base_fp16_GB": 14.0,
+    "adapter_params_assumed": 7000000,
+    "adapter_training_state_16_bytes_per_adapter_param_GB": 0.112,
+    "parameter_state_total_GB": 14.112,
+    "practical_peak_estimate_GB": "roughly 20-30+ GB; base weights dominate"
+  },
+  "qlora": {
+    "4bit_base_GB": 3.5,
+    "quantization_metadata_assumed_GB": 0.7,
+    "adapter_training_state_GB": 0.112,
+    "parameter_state_total_GB": 4.312,
+    "practical_peak_estimate_GB": "roughly 8-12+ GB; sequence length and batch can raise this"
+  }
+}

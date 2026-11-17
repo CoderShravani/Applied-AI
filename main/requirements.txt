@@ -1,0 +1,22 @@
+# Core / Task 2
+numpy>=1.26
+pandas>=2.1
+PyYAML>=6.0
+requests>=2.31
+pypdf>=4.2
+sentence-transformers>=3.0
+tqdm>=4.66
+
+# Task 1 (GPU notebook/runtime recommended)
+torch>=2.2
+transformers>=4.44
+datasets>=2.20
+peft>=0.12
+accelerate>=0.33
+bitsandbytes>=0.43; platform_system == "Linux"
+scikit-learn>=1.4
+
+# Report
+reportlab>=4.2
+
+psutil>=5.9

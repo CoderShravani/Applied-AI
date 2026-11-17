@@ -1,0 +1,12 @@
+[
+  "Explain the difference between a process and a thread in plain English, then give one practical example.",
+  "Write a Python function that returns the first non-repeating character in a string. Include time complexity.",
+  "A service's p95 latency rose from 180 ms to 900 ms after a deployment. Give a disciplined first-five-step debugging plan.",
+  "Convert this request into JSON with action, object, priority: 'Please create a high priority ticket for the payment timeout bug.'",
+  "Explain why database indexes can make reads faster but writes slower.",
+  "Summarise the trade-offs between REST and event-driven messaging for an order-processing system.",
+  "A user reports that a report sometimes shows yesterday's data. List likely causes and how you would isolate them.",
+  "Explain quantisation to a product manager without using equations.",
+  "Design a simple rate limiter for an API. State assumptions and edge cases.",
+  "Give a concise, evidence-conscious answer: what information would you need before recommending a model for production?"
+]

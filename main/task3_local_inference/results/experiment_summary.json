@@ -1,0 +1,107 @@
+{
+  "hardware": {
+    "gpu": "NVIDIA Tesla T4",
+    "gpu_memory_total_MiB": 15360,
+    "system_ram_total_GiB": 12
+  },
+  "benchmark": {
+    "prompt_count_per_model": 10,
+    "runs_per_prompt": 1,
+    "warmup": true,
+    "temperature": 0.2,
+    "max_output_tokens": 256,
+    "context_length": 4096,
+    "q4": {
+      "tag": "qwen2.5:1.5b",
+      "quantization": "Q4_K_M",
+      "ollama_resident_size": "1.2 GB",
+      "tokens_per_second_each": [
+        132.04,
+        139.09,
+        138.44,
+        141.23,
+        137.89,
+        137.68,
+        135.83,
+        133.8,
+        135.03,
+        137.09
+      ],
+      "mean_tokens_per_second": 136.81,
+      "mean_wall_seconds": 1.691
+    },
+    "q8": {
+      "tag": "qwen2.5:1.5b-instruct-q8_0",
+      "quantization": "Q8_0",
+      "ollama_resident_size": "1.8 GB",
+      "tokens_per_second_each": [
+        97.97,
+        100.37,
+        98.65,
+        99.82,
+        99.3,
+        99.7,
+        100.07,
+        100.15,
+        99.21,
+        97.87
+      ],
+      "mean_tokens_per_second": 99.31,
+      "mean_wall_seconds": 2.078
+    },
+    "q4_speed_advantage_percent": 37.8
+  },
+  "quality_review": {
+    "labels": {
+      "Model A": "qwen2.5:1.5b / Q4_K_M",
+      "Model B": "qwen2.5:1.5b-instruct-q8_0 / Q8_0"
+    },
+    "criteria_order": [
+      "correctness",
+      "completeness",
+      "instruction_following",
+      "clarity"
+    ],
+    "q4_means": [
+      3.4,
+      3.1,
+      3.6,
+      3.8
+    ],
+    "q8_means": [
+      3.4,
+      3.2,
+      3.7,
+      4.1
+    ],
+    "overall_q4": 3.48,
+    "overall_q8": 3.6,
+    "n_prompts": 10,
+    "n_outputs": 20,
+    "method": "Blinded rubric-based comparative review of the same ten prompts; 1\u20135 scores."
+  },
+  "memory_snapshot": {
+    "gpu_memory_used_MiB_both_models_loaded": 3113,
+    "gpu_memory_total_MiB": 15360,
+    "q4_process_MiB": 1240,
+    "q8_process_MiB": 1870,
+    "system_ram_used_GiB": 2.5,
+    "system_ram_available_GiB": 10,
+    "both_models_loaded_simultaneously": true,
+    "ollama_ps_processor": "100% GPU for both models",
+    "note": "The 3,113 MiB GPU reading is a simultaneous combined snapshot, not an isolated per-model peak."
+  },
+  "concurrency_design": {
+    "target_connected_users": 20,
+    "gpu_budget_GiB": 24,
+    "runtime_reserve_GiB": 2,
+    "illustrative_quantized_model_runtime_GiB": 1.5,
+    "remaining_kv_cache_activations_workspace_GiB": 20.5,
+    "initial_active_sequences": 8,
+    "prompt_tokens": 1000,
+    "generated_tokens": 200,
+    "kv_cache_precision": "FP16",
+    "strategy": "continuous batching where supported; bounded queue; per-user concurrency limits; context/output caps; prefix caching; back-pressure; p50/p95 latency and memory monitoring",
+    "status": "Design target only; 20-user load test not performed."
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "relative_deadline_priority_phrase",
+    "input": "Show me support case tomorrow, priority as soon as possible.",
+    "expected": {
+      "due_in_days": 1
+    },
+    "predicted": {
+      "due_in_days": 0
+    },
+    "observation": "Relative deadline was normalized to the current day rather than the next day; the phrase “as soon as possible” also requires consistent priority mapping.",
+    "improvement": "Add contrastive examples for today/tomorrow and urgency phrases; normalize relative dates in a deterministic post-processing layer."
+  },
+  {
+    "id": "object_synonym",
+    "input": "Show me work item leave the deadline blank, priority not urgent and assign it to Maya.",
+    "expected": {
+      "object": "task"
+    },
+    "predicted": {
+      "object": "ticket"
+    },
+    "observation": "The phrase “work item” was mapped to ticket rather than the task category.",
+    "improvement": "Expand synonym coverage and add targeted hard negatives for work item, ticket, task, and support case."
+  },
+  {
+    "id": "no_deadline_phrase",
+    "input": "Could you edit a doc for me? It is low priority, due there is no due date and assign it to Ava.",
+    "expected": {
+      "due_in_days": -1
+    },
+    "predicted": {
+      "due_in_days": 0
+    },
+    "observation": "An explicit no-deadline phrase was confused with a same-day deadline.",
+    "improvement": "Add no-deadline paraphrases and enforce a rule-based null-deadline normalization step."
+  }
+]

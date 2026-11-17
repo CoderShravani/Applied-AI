@@ -1,0 +1,72 @@
+{
+  "source": "NIST AI Risk Management Framework 1.0",
+  "source_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+  "pdf_pages": 48,
+  "questions": 15,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "similarity": "normalized cosine similarity using NumPy",
+  "hybrid_weights": {
+    "dense": 0.75,
+    "bm25": 0.25
+  },
+  "top_k": 5,
+  "chunk_overlap_words": 60,
+  "results": [
+    {
+      "chunk_words": 350,
+      "recall_at_5": 0.6,
+      "term_coverage_at_5": 1.0,
+      "hits": 9,
+      "questions": 15
+    },
+    {
+      "chunk_words": 700,
+      "recall_at_5": 0.667,
+      "term_coverage_at_5": 1.0,
+      "hits": 10,
+      "questions": 15
+    }
+  ],
+  "retrieval_failures": [
+    {
+      "question_id": "Q10",
+      "question": "What is the intended purpose of the AI RMF?",
+      "retrieved_pages_350": [
+        7,
+        11,
+        40,
+        30,
+        6
+      ],
+      "retrieved_pages_700": [
+        7,
+        40,
+        6,
+        43,
+        42
+      ],
+      "issue": "Top-ranked passages emphasized adjacent governance concepts rather than the most direct purpose statement.",
+      "fix": "Expand query with \u201cintended use\u201d, \u201ctrustworthiness\u201d, \u201cdesign, development, use and evaluation\u201d; retain hybrid lexical retrieval and add a cross-encoder reranker."
+    },
+    {
+      "question_id": "Q13",
+      "question": "What should organizations do when risk cannot be adequately mitigated?",
+      "retrieved_pages_350": [
+        10,
+        12,
+        12,
+        47,
+        21
+      ],
+      "retrieved_pages_700": [
+        10,
+        12,
+        47,
+        27,
+        21
+      ],
+      "issue": "General risk measurement passages outranked the specific treatment/response guidance.",
+      "fix": "Add terms for residual risk, response, cease development/deployment, and unacceptable impacts; rerank the top candidate set."
+    }
+  ]
+}

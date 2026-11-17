@@ -1,0 +1,12 @@
+models:
+- label: q4_candidate
+  ollama_tag: qwen2.5:1.5b
+  quantization: Q4_K_M
+- label: q8_candidate
+  ollama_tag: qwen2.5:1.5b-instruct-q8_0
+  quantization: Q8_0
+runs_per_prompt: 1
+warmup: true
+max_tokens: 256
+temperature: 0.2
+results_dir: results
